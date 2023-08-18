@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="tab-container">
+        <p class="tab" data-="userWeather">Your Weather</p>
+        <p class="tab" data-="searchWeather">Search Weather</p>
+      </div>
+
+      <div class="weatherContainer">
+        <div class="grantLocationcontainer">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Location Sign"
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow acces to get Weather Information</p>
+          <button class="btn" data-="grantAccess">Grant Access</button>
+        </div>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
